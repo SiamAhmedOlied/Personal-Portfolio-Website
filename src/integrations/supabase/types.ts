@@ -14,7 +14,87 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      hall_of_fame: {
+        Row: {
+          company_name: string
+          created_at: string
+          date_acknowledged: string
+          description: string | null
+          id: string
+          platform: string | null
+          reference_url: string | null
+          severity: string | null
+          updated_at: string
+          vulnerability_type: string
+        }
+        Insert: {
+          company_name: string
+          created_at?: string
+          date_acknowledged: string
+          description?: string | null
+          id?: string
+          platform?: string | null
+          reference_url?: string | null
+          severity?: string | null
+          updated_at?: string
+          vulnerability_type: string
+        }
+        Update: {
+          company_name?: string
+          created_at?: string
+          date_acknowledged?: string
+          description?: string | null
+          id?: string
+          platform?: string | null
+          reference_url?: string | null
+          severity?: string | null
+          updated_at?: string
+          vulnerability_type?: string
+        }
+        Relationships: []
+      }
+      projects: {
+        Row: {
+          category: string
+          created_at: string
+          demo_url: string | null
+          description: string
+          featured: boolean
+          id: string
+          image_url: string | null
+          repository_url: string | null
+          technologies: string[]
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          demo_url?: string | null
+          description: string
+          featured?: boolean
+          id?: string
+          image_url?: string | null
+          repository_url?: string | null
+          technologies?: string[]
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          demo_url?: string | null
+          description?: string
+          featured?: boolean
+          id?: string
+          image_url?: string | null
+          repository_url?: string | null
+          technologies?: string[]
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
