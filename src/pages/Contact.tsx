@@ -150,14 +150,14 @@ const Contact = () => {
     {
       icon: Facebook,
       label: "Facebook",
-      value: "@siamolied",
-      href: "https://github.com/siamahmedolied",
+      value: "SeyamAhmed",
+      href: "https://www.facebook.com/SeyamAhmedOlied",
       color: "text-muted-foreground"
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "@siamolied",
+      value: "@SiamAhmedOlied",
       href: "https://github.com/siamahmedolied",
       color: "text-muted-foreground"
     },
