@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Github, Twitter, Linkedin, ExternalLink, Send } from "lucide-react";
+import { Mail, Github, Twitter, Linkedin, Facebook, Send } from "lucide-react";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -26,7 +26,7 @@ const Contact = () => {
 
   useEffect(() => {
     // Initialize EmailJS (you'll need to add your credentials)
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    emailjs.init("QCSgwx2fCX4UQEebZ"); // Replace with your EmailJS public key
 
     // Animations
     gsap.fromTo(
@@ -111,7 +111,7 @@ const Contact = () => {
           from_email: formData.email,
           subject: formData.subject || "New Contact Form Submission",
           message: formData.message,
-          to_email: "siam@example.com", // Replace with your email
+          to_email: "siamahmedolied@gmail.com", // Replace with your email
         }
       );
 
@@ -143,38 +143,38 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "siam@example.com",
-      href: "mailto:siam@example.com",
+      value: "siamahmedolied@gmail.com",
+      href: "mailto:siamahmedolied@gmail.com",
       color: "text-primary"
+    },
+    {
+      icon: Facebook,
+      label: "Facebook",
+      value: "@siamolied",
+      href: "https://github.com/siamahmedolied",
+      color: "text-muted-foreground"
     },
     {
       icon: Github,
       label: "GitHub",
       value: "@siamolied",
-      href: "https://github.com/siamolied",
+      href: "https://github.com/siamahmedolied",
       color: "text-muted-foreground"
     },
     {
       icon: Twitter,
       label: "Twitter",
       value: "@siamolied",
-      href: "https://twitter.com/siamolied",
+      href: "https://x.com/SiamAhmedOlied",
       color: "text-blue-400"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Siam Ahmed Olied",
-      href: "https://linkedin.com/in/siamolied",
+      href: "https://linkedin.com/in/siamahmedolied07",
       color: "text-blue-500"
     },
-    {
-      icon: ExternalLink,
-      label: "Blog",
-      value: "blog.siamolied.com",
-      href: "https://blog.siamolied.com",
-      color: "text-accent"
-    }
   ];
 
   return (
