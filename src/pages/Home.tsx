@@ -53,10 +53,30 @@ const Home = () => {
   }, []);
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/siamolied", label: "GitHub" },
-    { icon: Twitter, href: "https://twitter.com/siamolied", label: "Twitter" },
-    { icon: Linkedin, href: "https://linkedin.com/in/siamolied", label: "LinkedIn" },
-    { icon: ExternalLink, href: "https://blog.siamolied.com", label: "Blog" },
+    {
+      icon: Facebook,
+      label: "Facebook",
+      value: "SeyamAhmed",
+      href: "https://www.facebook.com/SeyamAhmedOlied",
+    },
+    {
+      icon: Github,
+      label: "GitHub",
+      value: "@SiamAhmedOlied",
+      href: "https://github.com/siamahmedolied",
+    },
+    {
+      icon: Twitter,
+      label: "Twitter",
+      value: "@siamolied",
+      href: "https://x.com/SiamAhmedOlied",
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "Siam Ahmed Olied",
+      href: "https://linkedin.com/in/siamahmedolied07",
+    },
   ];
 
   return (
