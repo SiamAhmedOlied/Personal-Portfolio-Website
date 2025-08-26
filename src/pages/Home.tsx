@@ -56,25 +56,21 @@ const Home = () => {
     {
       icon: Facebook,
       label: "Facebook",
-      value: "SeyamAhmed",
       href: "https://www.facebook.com/SeyamAhmedOlied",
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "@SiamAhmedOlied",
       href: "https://github.com/siamahmedolied",
     },
     {
       icon: Twitter,
       label: "Twitter",
-      value: "@siamolied",
       href: "https://x.com/SiamAhmedOlied",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "Siam Ahmed Olied",
       href: "https://linkedin.com/in/siamahmedolied07",
     },
   ];
@@ -167,10 +163,6 @@ const Home = () => {
           ))}
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-1 h-16 bg-gradient-to-b from-primary to-transparent rounded-full"></div>
-        </div>
       </div>
     </div>
   );
