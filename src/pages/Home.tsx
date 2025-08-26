@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { Button } from "@/components/ui/button";
-import { Github, Twitter, Linkedin, ExternalLink, ArrowRight } from "lucide-react";
+import { Github, Twitter, Linkedin, ExternalLink, ArrowRight, Facebook } from "lucide-react";
 import GlitchText from "@/components/ui/glitch-text";
 
 const Home = () => {
