@@ -104,8 +104,8 @@ const Contact = () => {
     try {
       // EmailJS service configuration (replace with your actual service details)
       await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        "service_8n0aac5", // Replace with your EmailJS service ID
+        "template_2j1hurk", // Replace with your EmailJS template ID
         {
           from_name: formData.name,
           from_email: formData.email,
