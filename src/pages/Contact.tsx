@@ -94,50 +94,43 @@ const Contact = () => {
     return true;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!validateForm()) return;
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    setIsSubmitting(true);
+  if (!validateForm()) return;
 
-    try {
-      // EmailJS service configuration (replace with your actual service details)
-      await emailjs.send(
-        "service_8n0aac5", // Replace with your EmailJS service ID
-        "template_2j1hurk", // Replace with your EmailJS template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject || "New Contact Form Submission",
-          message: formData.message,
-          to_email: "siamahmedolied@gmail.com", // Replace with your email
-        }
-      );
+  setIsSubmitting(true);
 
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
-      });
+  try {
+    await emailjs.send(
+      "service_8n0aac5",  // your service ID
+      "template_2j1hurk", // your template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject || "New Contact Form Submission",
+        message: formData.message,
+      },
+      "QCSgwx2fCX4UQEebZ" // your public key
+    );
 
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("EmailJS error:", error);
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again or contact me directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for your message. I'll get back to you soon!",
+    });
+
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  } catch (error) {
+    console.error("EmailJS error:", error);
+    toast({
+      title: "Error",
+      description: "Failed to send message. Please try again or contact me directly.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const contactMethods = [
     {
